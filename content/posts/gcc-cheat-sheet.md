@@ -57,7 +57,7 @@ objcopy --strip-debug --strip-unneeded prog_not_stripped prog_stripped
 objcopy --only-keep-debug rip_from_binary debug_file
 ```
 
-#### Working with Pointers
+#### Having fun with C Pointers
 ```C
     #include <stdio.h>
 
