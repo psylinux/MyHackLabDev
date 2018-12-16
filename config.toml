@@ -1,6 +1,6 @@
 ## Basic Configuration
 baseurl = "https://psylinux.github.io/"
-languageCode = "en"
+languageCode = "en-US"
 title = "My Hack Lab"
 theme = "hyde-hyde"
 
@@ -8,9 +8,7 @@ theme = "hyde-hyde"
 # disqusShortname = "psylinux"
 # googleAnalytics = "your-google-analytics-id"
 enableRobotsTXT = true
-
-summarylength = 30
-
+summarylength = 10
 paginate = 5
 
 ## Site Settings
@@ -18,12 +16,12 @@ paginate = 5
     author = "Marcos Azevedo (psylinux)"
     title = "My Hack Lab"
     # description = "..."
-    authorimage = "/img/hugo.png"
+    authorimage = "/img/psylinux.png"
     dateformat = "Jan 2, 2006"
 
     # sidebar, copyright & license
     copyright = "psylinux"
-    license = "Copyright 2008-2018"
+    license = "Copyright"
     licenseURL = "https://opensource.org/licenses/MIT"
     #showBuiltWith = true
 
@@ -51,7 +49,7 @@ paginate = 5
     #stackoverflow = "<username>"
     #telegram = "<username>"
     email = "psylinux@gmail.com"
-    # gravatar = "your-email@example.com"
+    #gravatar = "your-email@example.com"
 
 ## Main Menu
 [[menu.main]]
