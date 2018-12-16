@@ -1,3 +1,71 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+## Basic Configuration
+baseurl = "https://psylinux.github.io/"
+languageCode = "en"
+title = "My Hack Lab"
+theme = "hyde-hyde"
+
+## Hugo Built-in Features
+# disqusShortname = "psylinux"
+# googleAnalytics = "your-google-analytics-id"
+enableRobotsTXT = true
+
+summarylength = 30
+
+paginate = 5
+
+## Site Settings
+[params]
+    author = "Marcos Azevedo (psylinux)"
+    title = "My Hack Lab"
+    # description = "..."
+    authorimage = "/img/hugo.png"
+    dateformat = "Jan 2, 2006"
+
+    # sidebar, copyright & license
+    copyright = "psylinux"
+    license = "Copyright 2008-2018"
+    licenseURL = "https://opensource.org/licenses/MIT"
+    #showBuiltWith = true
+
+    # https://highlightjs.org
+    highlightjs = true
+    highlightjsstyle = "github"
+    
+    # please choose either GraphComment or Disqus or Utterances
+    #GraphCommentId = "..."
+    #UtterancesRepo = "..." # https://utteranc.es/
+    #UtterancesIssueTerm = "..." # pathname, url, title, og:title
+    #UtterancesTheme = "..." # github-light or github-dark
+
+    # Table of contents
+    #toc = none, "hugo", or "tocbot"
+
+## Social Accounts
+[params.social]
+    github = "psylinux"
+    #instagram = "<username>"
+    #xing = "<username>"
+    linkedin = "mtazevedo"
+    twitter = "psylinux"
+    #facebook = "<username>"
+    #stackoverflow = "<username>"
+    #telegram = "<username>"
+    email = "psylinux@gmail.com"
+    # gravatar = "your-email@example.com"
+
+## Main Menu
+[[menu.main]]
+    name = "Posts"
+    weight = 100
+    identifier = "posts"
+    url = "/posts/"
+[[menu.main]]
+    name = "Portfolio"
+    identifier = "portfolio"
+    weight = 200
+    url = "/portfolio/"
+[[menu.main]]
+    name = "About"
+    identifier = "about"
+    weight = 300
+    url = "/about/"
