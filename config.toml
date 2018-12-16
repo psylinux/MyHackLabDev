@@ -37,6 +37,7 @@ paginate = 5
 
     # Table of contents
     #toc = none, "hugo", or "tocbot"
+    toc = "hugo"
 
 ## Social Accounts
 [params.social]

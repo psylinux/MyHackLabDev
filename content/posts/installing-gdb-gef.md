@@ -1,6 +1,6 @@
 +++
-title = "Installing GEF (GDB Plugin)"
-description = "GDB Enhanced Features for exploit devs & reversers"
+title = "Installing GEF (GDB Plug-in)"
+description = "GDB Enhanced Features for exploit devs & reverser's"
 tags = [
     "linux",
     "gdb",
@@ -19,7 +19,8 @@ categories = [
 
 ### Installing GEF
 
-1. Goto [GEF releases](https://github.com/hugsy/gef) and clone the repository and clone this to /opt:
+#### Cloning
+Goto [GEF Project](https://github.com/hugsy/gef) and clone the repository to /opt:
 
 ```
     cd /opt
@@ -27,23 +28,24 @@ categories = [
 ```
 
 
-2. Check if the GDB was compiled with Python support:
+#### Checking
 
-    **run the following command in terminal:**
+* To check if the GDB was compiled with Python support run the following command in terminal:
+
 ```
         gdb -nx -ex 'pi print(sys.version)' -ex quit
 ```
 
-    **The output should be similar to this:**
+* The output should be similar to this:
+
 ```
         2.7.3 (default, Mar 18 2014, 06:31:17)
         [GCC 4.6.3]
 ```
 
 
-3. Installing:
-
-    To install the gef pluging, just run the shell scripts as following:
+#### Installing
+To install the gef plug-in, just run the shell scripts as following:
 
 ```
     /opt/gef/scripts/gef.sh
@@ -51,13 +53,14 @@ categories = [
 ```
 
 
-4. Configuring:
+#### Configuring
+* Use the *pyenv* to set the correct python version
+* Enter the GDB and type: _gef missing_
+* Use *pip* to install the GEF dependences
 
-    * Use the pyenv to set the correct python version
-    * Use pip to install the GEF dependences (see inside gdb: gef missing)
 
-    
-5. Updating:
+#### Updating
+To keep the GEF plug-in update, just do:
     
 ```
     python ~/.gdbinit-gef.py --update
