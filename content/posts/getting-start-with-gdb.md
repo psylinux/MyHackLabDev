@@ -21,6 +21,37 @@ categories = [
 2. Go to [Installing GEF (GDB Plug-in)](/posts/installing-gdb-gef), to use GEF Plug-in.
 
 
+#### Compiling with debug symbols
+```
+gcc -ggdb source.c -o prog_with_symbols
+```
+
+#### Stripping symbols off the binary
+```
+strip --strip-debug --strip-unneeded prog_not_stripped -o prog_nodebug_stripped
+```
+
+#### Ripping Symbols off the binary
+```
+objcopy --only-keep-debug rip_from_binary debug_file
+```
+
+#### Adding Debug Symbols to a binary
+1. Add it in the binary itself
+```
+objcopy --add-gnu-debuglink=debug_file binary_file
+```
+
+2. Load the symbol file within GDB
+```
+symbol-file debug_file
+```
+
+#### Using objdump
+objdump -M intel -D a.out | grep -A20 main.:
+
+----
+
 ### GDB Cheat Sheet
 
 #### Switching between AT&T and Intel Syntax
@@ -60,12 +91,12 @@ info sources
 info source
 ```
 
-#### To list global variables and static
+#### To list global variables and static (not local variables)
 ```
 info variables
 ```
 
-#### To get local variables
+#### To list local variables
 ```
 info scope Function_Name
 ```

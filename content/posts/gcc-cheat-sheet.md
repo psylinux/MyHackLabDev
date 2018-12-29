@@ -43,6 +43,13 @@ gcc -static cve_2016_0728.c -o cve_2016_0728 -lkeyutils -Wall
     ```
 
 #### Compiling with debug symbols
+Debug Symbol File Types:
+1. DWARF 2
+2. COFF
+3. XCOFF
+4. STABS
+
+* GCC use the -g option to define the type:
 ```
 gcc -ggdb source.c -o prog_with_symbols
 ```
