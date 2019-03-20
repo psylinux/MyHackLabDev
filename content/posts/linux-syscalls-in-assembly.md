@@ -31,7 +31,7 @@ $man 2 write
 
 As we can see, in this snipped code, the `write` syscall has three arguments:
 
-**ssize_t write(int fd, const void *buf, size_t count);**
+**ssize_t write(int fd, const void \*buf, size_t count);**
 
 The first argument is the file descriptor, which has three modes:
 
