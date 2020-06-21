@@ -1,2 +1,2 @@
-# MyHackLabDev
-My Hack Lab Dev Files
+# Blog My HackLab (Dev)
+My Hack Lab Development Files
