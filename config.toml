@@ -2,7 +2,8 @@
 baseurl = "https://psylinux.github.io/"
 languageCode = "en-US"
 title = "My Hack Lab"
-theme = "hyde-hyde"
+#theme = "hyde-hyde"
+theme = "learn"
 
 ## Hugo Built-in Features
 # disqusShortname = "psylinux"
