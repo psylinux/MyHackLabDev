@@ -2,8 +2,7 @@
 baseurl = "https://psylinux.github.io/"
 languageCode = "en-US"
 title = "My Hack Lab"
-#theme = "hyde-hyde"
-theme = "learn"
+theme = "hyde-hyde"
 
 ## Hugo Built-in Features
 # disqusShortname = "psylinux"
@@ -14,44 +13,44 @@ paginate = 5
 
 ## Site Settings
 [params]
-    author = "Marcos Azevedo (psylinux)"
+    author = "Marcos Azevedo (a.k.a psylinux)"
     title = "My Hack Lab"
-    # description = "..."
+    description = "Marcos Azevedo (a.k.a psylinux)"
     authorimage = "/img/psylinux.png"
     dateformat = "Jan 2, 2006"
 
-    # sidebar, copyright & license
+    ## sidebar, copyright & license
     copyright = "psylinux"
     license = "Copyright"
     licenseURL = "https://opensource.org/licenses/MIT"
     #showBuiltWith = true
 
-    # https://highlightjs.org
+    ## https://highlightjs.org
     highlightjs = true
     highlightjsstyle = "github"
-    
-    # please choose either GraphComment or Disqus or Utterances
+
+    ## please choose either GraphComment or Disqus or Utterances
     #GraphCommentId = "..."
     #UtterancesRepo = "..." # https://utteranc.es/
     #UtterancesIssueTerm = "..." # pathname, url, title, og:title
     #UtterancesTheme = "..." # github-light or github-dark
 
     # Table of contents
-    #toc = none, "hugo", or "tocbot"
+    ##toc = none, "hugo", or "tocbot"
     toc = "hugo"
 
 ## Social Accounts
 [params.social]
     github = "psylinux"
-    #instagram = "<username>"
-    #xing = "<username>"
     linkedin = "mtazevedo"
     twitter = "psylinux"
+    email = "psylinux@gmail.com"
+    #gravatar = "your-email@example.com"
+    #instagram = "<username>"
+    #xing = "<username>"
     #facebook = "<username>"
     #stackoverflow = "<username>"
     #telegram = "<username>"
-    email = "psylinux@gmail.com"
-    #gravatar = "your-email@example.com"
 
 ## Main Menu
 [[menu.main]]
@@ -60,10 +59,10 @@ paginate = 5
     identifier = "posts"
     url = "/posts/"
 [[menu.main]]
-    name = "Portfolio"
-    identifier = "portfolio"
+    name = "Projects"
+    identifier = "projects"
     weight = 200
-    url = "/portfolio/"
+    url = "/projects/"
 [[menu.main]]
     name = "About"
     identifier = "about"
