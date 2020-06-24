@@ -9,8 +9,8 @@ weight: 10
 ---
 
 # PyEnv
-## Installing PyEnv
 
+## Installing Dependencies
 ```
 apt-get install -y make build-essential libssl-dev \
     zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
@@ -18,6 +18,7 @@ apt-get install -y make build-essential libssl-dev \
     xz-utils tk-dev libffi-dev liblzma-dev python-openssl
 ```
 
+## Installing PyEnv
 ```
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 ```
