@@ -2,7 +2,7 @@
 author: "Marcos Azevedo"
 date: 2018-12-28
 linktitle: "Using the Linux Syscalls in Assembly"
-title: Using the Linux Syscalls in Assembly"
+title: "Using the Linux Syscalls in Assembly"
 categories: [ "assembly", "glibc", "development", "exploitation" ]
 tags: [ "assembly", "nasm", "dev", "glibc", "linux", "userland", "exploitation" ]
 weight: 10
@@ -33,7 +33,8 @@ Now that we know that must use the number **1** to call the write syscall, let's
 ```
 $ man 2 write
 ```
-<a href="pics/write_syscall_1.png"><img src="pics/write_syscall_1.png"></a>
+
+![](../pics/write_syscall_1.png)
 
 As we can see, in this snipped code, the `write` syscall has three arguments:
 
@@ -48,7 +49,7 @@ The first argument is the file descriptor, which has three modes:
 ## Invoking the syscalls
 Reading the syscall manual, we learn how to setup our x64 arch registers to invoke syscalls:
 
-<a href="pics/exit_syscall_reg_1.png"><img src="pics/exit_syscall_reg_1.png"></a>
+![](../pics/exit_syscall_reg_1.png)
 
 1. The syscall number goes in **RAX**
 2. The first argument goes in **RDI**
@@ -93,7 +94,7 @@ $ ld syscall-001.o -o syscall-001.bin
 
 Once we run our program with **./syscall-001.bin** we can see that our message "Hack The Planet" is printed out on the screen, but the *Segmentation Fault* error message appears at the end of execution:
 
-<a href="pics/write_syscall_2.png"><img src="pics/write_syscall_2.png"></a>
+![](../pics/write_syscall_2.png)
 
 
 If we want that our program exits nicely, then we have to use `exit` syscall. Let's take a deeper look at this issue.
@@ -113,7 +114,7 @@ As we can see the `exit` syscall has the number 60. Let's check the **man page**
 $man 2 exit
 ```
 
-<a href="pics/exit_syscall_1.png"><img src="pics/exit_syscall_1.png"></a>
+![](../pics/exit_syscall_1.png)
 
 There is only one argument "**int status**" to define the exit status, for example, 0 (zero) status for no error:
 
@@ -165,16 +166,15 @@ $ ld syscall-001.o -o syscall-001.bin
 
 And after we run the *./syscall-001.bin*, we can check that the exit status is **"1"** as we designed to be.
 
-<a href="pics/exit_syscall_2.png"><img src="pics/exit_syscall_2.png"></a>
+![](../pics/exit_syscall_2.png)
 
 If we use the `strace` command to analise this elf32 binary we shall see some interesting stuff. For example, we can see that when we run the binary, the shell uses an **execve** with our binary passed as an argument along with other environment variables.
 
-<a href="pics/exit_syscall_3.png"><img src="pics/exit_syscall_3.png"></a>
+![](../pics/exit_syscall_3.png)
 
-<a href="pics/execve_1.png"><img src="pics/execve_1.png"></a>
+![](../pics/execve_1.png)
 
 ----
+![](../pics/syscall_execution_1.png)
 
-<a href="pics/syscall_execution_1.png"><img src="pics/syscall_execution_1.png"></a>
-
-<a href="pics/syscall_execution_2.png"><img src="pics/syscall_execution_2.png"></a>
+![](../pics/syscall_execution_2.png)

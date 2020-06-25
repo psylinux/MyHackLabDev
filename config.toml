@@ -5,14 +5,15 @@ title = "My Hack Lab"
 theme = "hyde-hyde"
 
 ## Hugo Built-in Features
-# disqusShortname = "psylinux"
-# googleAnalytics = "your-google-analytics-id"
+#disqusShortname = "psylinux"
+#googleAnalytics = "your-google-analytics-id"
 enableRobotsTXT = true
 summarylength = 10
-paginate = 5
+#paginate = 5
 
 ## Site Settings
 [params]
+    mainSections = ["posts"]
     author = "Marcos Azevedo (a.k.a psylinux)"
     title = "My Hack Lab"
     description = "Marcos Azevedo (a.k.a psylinux)"
@@ -27,7 +28,7 @@ paginate = 5
 
     ## https://highlightjs.org
     highlightjs = true
-    highlightjsstyle = "github"
+    highlightjsstyle = "monokai-sublime"
 
     ## please choose either GraphComment or Disqus or Utterances
     #GraphCommentId = "..."
@@ -62,7 +63,7 @@ paginate = 5
     name = "Projects"
     identifier = "projects"
     weight = 200
-    url = "/projects/"
+    url = "/portfolio/"
 [[menu.main]]
     name = "About"
     identifier = "about"

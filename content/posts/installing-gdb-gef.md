@@ -12,7 +12,7 @@ weight: 10
 ## Installing GEF
 
 ### Cloning
-Goto [GEF Project](https://github.com/hugsy/gef) and clone the repository to /opt:
+Goto [GEF Project](https://github.com/hugsy/gef) and clone the repository to __/opt__
 ```
 cd /opt
 git clone https://github.com/hugsy/gef.git

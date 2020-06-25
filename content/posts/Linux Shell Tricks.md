@@ -1,10 +1,10 @@
 ---
 author: "Marcos Azevedo"
-date: 2018-12-28
-linktitle: "Linux Shell Tricks"
-title: "Linux Shell Tricks"
-categories: [ "linux", "exploitation" ]
-tags: [ "shell", "bash", "linux", "exploitation" ]
+date: 2020-06-16
+linktitle: "Cheat Sheet :: Linux Shell Tricks"
+title: "Cheat Sheet :: Linux Shell Tricks"
+categories: [ "cheatsheet", "exploitation-techniques" ]
+tags: [ "shell", "bash", "linux" ]
 weight: 10
 ---
 
@@ -41,16 +41,17 @@ echo -n "&" | hexdump -C
 `:g/^#/d`
 
 - For lines where windows editor put ^M and you want to remove (using vi).
-    `:%s/^V^M//g`
+`:%s/^V^M//g`
 
-    The final command will look like this:
-    `:%s/^M//g`
+- The final command will look like this:
+`:%s/^M//g`
 
 ### Using sed
-`sed -e "s/^M//" file-orig.sh > file-mod.sh`
+```
+sed -e "s/^M//" file-orig.sh > file-mod.sh
+```
 
 ### Using Dos2Unix
-
 ```
 dos2unix input
 dos2unix -b input
@@ -58,7 +59,9 @@ dos2unix -b input
 
 ### Using tr
 To delete a CRLF:
-`tr -d '\r' < input > output`
+```
+tr -d '\r' < input > output
+```
 
 ### Using egrep
 ````
@@ -89,12 +92,14 @@ Or
 ```
 /usr/bin/python3 -c 'import pty;pty.spawn("/bin/bash")'
 ```
+
 - Press CTRL+Z
 - On attacker's machine:
 ```
 stty raw -echo
 ```
-4. Now press `fg` to get the shell back
+
+- Now press `fg` to get the shell back
 
 ---
 
@@ -113,10 +118,12 @@ setfacl --restore=/home/psylinux/permissoes_desktop.txt -R
 ---
 
 ## Smart management of soft links with _stow_
-- Instalation
+- Installation
+
 ```
 apt install stow
 ```
+
 - Managing soft links
 ```
 stow -v -t Target Folder1 Folder2 Folder3
@@ -137,4 +144,3 @@ stow -v -R -t Target Folder1 --ignore='SubFolder1' --ignore='SubFolder2'
 ```
 stow -v -R -t Target Folder1 --ignore='(?:\..*|[^+]*\+[^+]*)'
 ```
-
