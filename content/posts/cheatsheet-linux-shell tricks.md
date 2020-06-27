@@ -4,7 +4,7 @@ date: 2020-06-16
 linktitle: "Cheat Sheet :: Linux Shell Tricks"
 title: "Cheat Sheet :: Linux Shell Tricks"
 categories: [ "cheatsheet", "exploitation-techniques" ]
-tags: [ "shell", "bash", "linux" ]
+tags: [ "cheatsheet", "shell", "bash", "linux" ]
 weight: 10
 ---
 

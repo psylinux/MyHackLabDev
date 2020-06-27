@@ -3,8 +3,8 @@ author: "Marcos Azevedo"
 date: 2018-12-16
 linktitle: "Cheat Sheet :: GCC Compiling Cheat Sheet"
 title: "Cheat Sheet :: GCC Compiling Cheat Sheet"
-categories: [ "cross-compiling", "development" ]
-tags: [ "linux", "windows", "gcc", "compiling", "cross-compiling", "development" ]
+categories: [ "cheatsheet", "cross-compiling", "development" ]
+tags: [ "cheatsheet", "linux", "windows", "gcc", "compiling", "cross-compiling", "development" ]
 weight: 10
 ---
 
