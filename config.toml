@@ -11,6 +11,10 @@ enableRobotsTXT = true
 summarylength = 10
 #paginate = 5
 
+## Building Configuration
+[build]
+    publishDir = "../psylinux.github.io/"
+
 ## Site Settings
 [params]
     mainSections = ["posts"]
