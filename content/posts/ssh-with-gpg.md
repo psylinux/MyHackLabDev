@@ -1,6 +1,6 @@
 ---
 author: "Marcos Azevedo"
-date: 2018-12-16
+date: 2018-10-02
 linktitle: "HowTo :: SSH access using a GPG key for authentication"
 title: "HowTo :: SSH access using a GPG key for authentication"
 categories: [ "howto", "ssh", "GPG" ]
@@ -22,7 +22,7 @@ This exercise will use a subkey that has been created for authentication to comp
 
 ## Create an authentication subkey
 You should already have a GPG key. If you don't, read one of the many [fine tutorials](https://docs.fedoraproject.org/en-US/quick-docs/create-gpg-keys/) available on this topic. You will create the subkey by editing your existing key. You need to edit your key in expert mode to get access to the appropriate options.
-The workflow adds a new key where you can choose its capabilities—specifically, you want to toggle its capabilities to just have authentication. SSH typically uses a 2048-bit RSA key that does not expire (type 8 in the options below).
+The workflow adds a new key where you can choose its capabilitie -- specifically, you want to toggle its capabilities to just have authentication. SSH typically uses a 2048-bit RSA key that does not expire (type 8 in the options below).
 Below is an edited version of the workflow. This and all other commands were tested on Fedora 29.
 
 ```Bash
@@ -31,121 +31,67 @@ $ gpg2 --expert --edit-key <KEY ID>
 gpg> addkey
 
 Please select what kind of key you want:
-
 (3) DSA (sign only)
-
 (4) RSA (sign only)
-
 (5) Elgamal (encrypt only)
-
 (6) RSA (encrypt only)
-
 (7) DSA (set your own capabilities)
-
 (8) RSA (set your own capabilities)
-
 (10) ECC (sign only)
-
 (11) ECC (set your own capabilities)
-
 (12) ECC (encrypt only)
-
 (13) Existing key
-
 Your selection? 8
 
-  
-
 Possible actions for a RSA key: Sign Encrypt Authenticate
-
 Current allowed actions: Sign Encrypt
 
-  
-
 (S) Toggle the sign capability
-
 (E) Toggle the encrypt capability
-
 (A) Toggle the authenticate capability
-
 (Q) Finished
-
-  
-
 Your selection? s
-
 Your selection? e
-
 Your selection? a
 
-  
-
 Possible actions for a RSA key: Sign Encrypt Authenticate
-
 Current allowed actions: Authenticate
 
-  
-
 (S) Toggle the sign capability
-
 (E) Toggle the encrypt capability
-
 (A) Toggle the authenticate capability
-
 (Q) Finished
-
-  
-
 Your selection? q
 
 RSA keys may be between 1024 and 4096 bits long.
-
 What keysize do you want? (2048)
-
 Requested keysize is 2048 bits
 
 Please specify how long the key should be valid.
-
 0 = key does not expire
-
 <n> = key expires in n days
-
 <n>w = key expires in n weeks
-
 <n>m = key expires in n months
-
 <n>y = key expires in n years
-
 Key is valid for? (0)
-
 Key does not expire at all
-
 Is this correct? (y/N) y
-
 Really create? (y/N) y
+ 
 
-  
-
-sec rsa2048/8715AF32191DB135
-
+sec rsa4096/5B6C9AA9718B1298
 created: 2019-03-21 expires: 2021-03-20 usage: SC
-
 trust: ultimate validity: ultimate
 
-ssb rsa2048/150F16909B9AA603
-
+ssb rsa4096/4CDB1F634D2FD7C
 created: 2019-03-21 expires: 2021-03-20 usage: E
 
-ssb rsa2048/17E7403F18CB1123
-
+ssb rsa4096/136F0B4E3D42CF31
 created: 2019-03-21 expires: never usage: A
 
-\[ultimate\] (1). Brian Exelbierd
-
-  
+[ultimate] (1). Marcos Azevedo (psylinux)
 
 gpg> quit
-
 Save changes? (y/N) y
 ```
 
@@ -157,40 +103,36 @@ $ cat .gnupg/gpg-agent.conf
 enable-ssh-support
 ```
   
-Optionally, you may want to pre-specify the keys to be used for SSH so you won't have to use **ssh-add** to load the keys. To do this, specify the keys in the **~/.gnupg/sshcontrol** file. The entries in this file are _keygrips_—internal identifiers **gpg-agent** uses to refer to keys. Unlike a key hash, a keygrip refers to both the public and private key. To find the keygrip, use **gpg2 -K --with-keygrip**, as shown below. Then add that line to the **sshcontrol** file.
+Optionally, you may want to pre-specify the keys to be used for SSH so you won't have to use **ssh-add** to load the keys. To do this, specify the keys in the **~/.gnupg/sshcontrol** file. The entries in this file are _keygrips -- internal identifiers **gpg-agent** uses to refer to keys. Unlike a key hash, a keygrip refers to both the public and private key. To find the keygrip, use **gpg2 -K --with-keygrip**, as shown below. Then add that line to the **sshcontrol** file.
 
 ```Bash
 $ gpg2 -K --with-keygrip
-/home/bexelbie/.gnupg/pubring.kbx
-\------------------------------
-sec rsa2048 2019-03-21 \[SC\] \[expires: 2021-03-20\]
+/home/psylinux/.gnupg/pubring.kbx
+------------------------------
+sec rsa2048 2019-03-21 [SC] [expires: 2021-03-20]
+26C33AA7D4E4F7651C75AC218725AD32291EB131
 
-96F33EA7F4E0F7051D75FC208715AF32191DB135
+Keygrip = 131E27EAC300658183D3E6B94B6D9AB1778A0291
+uid [ultimate] Marcos Azevedo (psylinux)
 
-Keygrip = 90E08830BC1AAD225E657AD4FBE638B3D8E50C9E
+ssb rsa2048 2019-03-21 [E] [expires: 2021-03-20]
+Keygrip = 59A032B3BE1574BA0960DEDFB28FC26489383171
 
-uid \[ultimate\] Brian Exelbierd
-
-ssb rsa2048 2019-03-21 \[E\] \[expires: 2021-03-20\]
-
-Keygrip = 5FA04ABEBFBC5089E50EDEB43198B4895BCA2136
-
-ssb rsa2048 2019-03-21 \[A\]
-
-Keygrip = 7710BA0643CC022B92544181FF2EAC2A290CDC0E
+ssb rsa2048 2019-03-21 [A]
+Keygrip = 2BE91C3C443AA29C3703D004587AD6DA9D7E40FC
 ```
 
 Then write your corresponding **keygrip** into **sshcontrol** file
 ```Bash
-$ echo 7710BA0643CC022B92544181FF2EAC2A290CDC0E >> ~/.gnupg/sshcontrol
+$ echo 2BE91C3C443AA29C3703D004587AD6DA9D7E40FC >> ~/.gnupg/sshcontrol
 ```
 
-Last, you need to tell SSH how to access the **gpg-agent**. This is done by changing the value of the **SSH\_AUTH\_SOCK** environment variable. The following two lines, when added to your **~/.bashrc**, will ensure the variable is set correctly and that the agent is launched and ready for use.
+Last, you need to tell SSH how to access the **gpg-agent**. This is done by changing the value of the **SSH_AUTH_SOCK** environment variable. The following two lines, when added to your **~/.bashrc**, will ensure the variable is set correctly and that the agent is launched and ready for use.
 
 ```Bash
 $ cat ~/.bashrc
 ...
-export SSH\_AUTH\_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 ...
 ```
