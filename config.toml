@@ -12,8 +12,7 @@ summarylength = 10
 #paginate = 5
 
 ## Building Configuration
-[build]
-    publishDir = "../psylinux.github.io/"
+publishdir = "/Users/psylinux/Dropbox/Repos/blog/psylinux.github.io"
 
 ## Site Settings
 [params]
