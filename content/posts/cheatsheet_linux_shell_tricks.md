@@ -20,7 +20,7 @@ date updated: '2021-03-25T17:36:34-03:00'
 # Cheat Sheet :: Linux Shell Tricks
 
 ## To find the corresponding hex code
-```
+```bash
 echo -n "&" | hexdump -C
 ```
 
@@ -56,29 +56,29 @@ echo -n "&" | hexdump -C
 `:%s/^M//g`
 
 ### Using sed
-```
+```bash
 sed -e "s/^M//" file-orig.sh > file-mod.sh
 ```
 
 ### Using Dos2Unix
-```
+```bash
 dos2unix input
 dos2unix -b input
 ```
 
 ### Using tr
 To delete a CRLF:
-```
+```bash
 tr -d '\r' < input > output
 ```
 
 ### Using egrep
-````
+```bash
 egrep -v "^#|^$" squid.original > squid.conf
-````
+```
 
 ### Using grep
-```
+```bash
 grep -v ^["#"] squid.original > squid.conf
 ```
 
@@ -87,24 +87,24 @@ grep -v ^["#"] squid.original > squid.conf
 ## Interactive shell
 
 ### Using rlwrap
-```
+```bash
 rlwrap nc -nlv 443
 rlwrap ./exploit.sh
 ```
 
 ### Using python
 - Once you have a shell on the victim:
-```
+```bash
 python -c 'import pty;pty.spawn("/bin/bash")'
 ```
 Or
-```
+```bash
 /usr/bin/python3 -c 'import pty;pty.spawn("/bin/bash")'
 ```
 
 - Press CTRL+Z
 - On attacker's machine:
-```
+```bash
 stty raw -echo
 ```
 
@@ -115,12 +115,12 @@ stty raw -echo
 ## Backup of files permissions
 
 - To create the permission file
-```
+```bash
 getfacl -Rp /home/psylinux/Desktop > /home/psylinux/permissoes_desktop.txt
 ```
 
 - To restore the permissions from file
-```
+```bash
 setfacl --restore=/home/psylinux/permissoes_desktop.txt -R
 ```
 
@@ -129,27 +129,27 @@ setfacl --restore=/home/psylinux/permissoes_desktop.txt -R
 ## Smart management of soft links with _stow_
 - Installation
 
-```
+```bash
 apt install stow
 ```
 
 - Managing soft links
-```
+```bash
 stow -v -t Target Folder1 Folder2 Folder3
 ```
 
-```
+```bash
 stow -v -D -t Target Folder1 Folder2 Folder3
 ```
 
-```
+```bash
 stow -v -R -t Target Folder1 Folder2 Folder3 Folder4
 ```
 
-```
+```bash
 stow -v -R -t Target Folder1 --ignore='SubFolder1' --ignore='SubFolder2'
 ```
 
-```
+```bash
 stow -v -R -t Target Folder1 --ignore='(?:\..*|[^+]*\+[^+]*)'
 ```

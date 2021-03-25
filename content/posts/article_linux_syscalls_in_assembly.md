@@ -36,7 +36,7 @@ We'll build a program, an Linux elf64 binary, to use some basics **syscalls** to
 For this task we'll take a look at the `write` syscall that allow us to print a message on the screen.
 In Linux x64, we can use the file **.h** (header) bellow to find more information about the `write` syscall:
 
-```
+```bash
 $ cat /usr/include/x86_64-linux-gnu/asm/unistd_64.h | grep write
 #define __NR_write 1
 #define __NR_pwrite64 18
@@ -47,7 +47,7 @@ $ cat /usr/include/x86_64-linux-gnu/asm/unistd_64.h | grep write
 ```
 
 Now that we know that must use the number **1** to call the write syscall, let's check the developer's manual to learn more about this syscall.
-```
+```bash
 $ man 2 write
 ```
 
@@ -104,7 +104,7 @@ section .data
 ## Compiling the code
 Let's compile aqnd link this assembly pseudo code:
 
-```
+```bash
 $ nasm -felf64 syscall-001.nasm -o syscall-001.o
 $ ld syscall-001.o -o syscall-001.bin
 ```
@@ -118,7 +118,7 @@ If we want that our program exits nicely, then we have to use `exit` syscall. Le
 
 Let's get back to that header file which contains all the syscalls for Linux x64:
 
-```
+```bash
 $ cat /usr/include/x86_64-linux-gnu/asm/unistd_64.h | grep exit
 #define __NR_exit 60
 #define __NR_exit_group 231
@@ -127,7 +127,7 @@ $ cat /usr/include/x86_64-linux-gnu/asm/unistd_64.h | grep exit
 
 As we can see the `exit` syscall has the number 60. Let's check the **man page** for better understand this **syscall**.
 
-```
+```bash
 $man 2 exit
 ```
 
@@ -176,7 +176,7 @@ section .data
 
 Now, we compile the assembly pseudo code:
 
-```
+```bash
 $ nasm -felf64 syscall-001.nasm -o syscall-001.o
 $ ld syscall-001.o -o syscall-001.bin
 ```

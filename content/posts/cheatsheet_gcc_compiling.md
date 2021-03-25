@@ -25,24 +25,24 @@ date updated: '2021-03-25T17:36:17-03:00'
 # Cheat Sheet :: GCC Syntax and Compiling Options 
 
 ## Static compiling
-```
+```bash
 gcc -static cve_2016_0728.c -o cve_2016_0728 -lkeyutils -Wall
 ```
 
 ## Cross compiling a C code from Linux to Windows
 ### Install mingw-w64 cross-compiler:
-```
+```bash
 apt-get install mingw-w64
 ```
 
 ### To compile a Windows PE Executable 32bit:
-```
+```bash
 i686-w64-mingw32-gcc 271.c -o 271
 x86_64-w64-mingw32-gcc-win32 271.c -o 271
 ```
 
 ### Run the binary file with **wine**:
-```
+```bash
 wine file.exe
 ```
 
@@ -54,17 +54,17 @@ Debug Symbol File Types:
 4. STABS
 
 ### GCC use the -g option to define the type:
-```
+```bash
 gcc -ggdb source.c -o prog_with_symbols
 ```
 
 ### Stripping symbols off the binary
-```
+```bash
 objcopy --strip-debug --strip-unneeded prog_not_stripped prog_stripped
 ```
 
 ### Ripping Symbols off the binary
-```
+```bash
 objcopy --only-keep-debug rip_from_binary debug_file
 ```
 

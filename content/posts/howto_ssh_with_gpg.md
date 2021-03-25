@@ -35,7 +35,7 @@ You should already have a GPG key. If you don't, read one of the many [fine tuto
 The workflow adds a new key where you can choose its capabilitie -- specifically, you want to toggle its capabilities to just have authentication. SSH typically uses a 2048-bit RSA key that does not expire (type 8 in the options below).
 Below is an edited version of the workflow. This and all other commands were tested on Fedora 29.
 
-```Bash
+```bash
 $ gpg2 --expert --edit-key <KEY ID>
 
 gpg> addkey
@@ -108,14 +108,14 @@ Save changes? (y/N) y
 ## Enable the GPG subkey
 When you use SSH, a program called **ssh-agent** is used to manage the keys. To use a GPG key, you'll use a similar program, **gpg-agent**, that manages GPG keys. To get **gpg-agent** to handle requests from SSH, you need to enable support by adding the line **enable-ssh-support** to the **~/.gnupg/gpg-agent.conf**.
 
-```Bash
+```bash
 $ cat .gnupg/gpg-agent.conf
 enable-ssh-support
 ```
   
 Optionally, you may want to pre-specify the keys to be used for SSH so you won't have to use **ssh-add** to load the keys. To do this, specify the keys in the **~/.gnupg/sshcontrol** file. The entries in this file are _keygrips -- internal identifiers **gpg-agent** uses to refer to keys. Unlike a key hash, a keygrip refers to both the public and private key. To find the keygrip, use **gpg2 -K --with-keygrip**, as shown below. Then add that line to the **sshcontrol** file.
 
-```Bash
+```bash
 $ gpg2 -K --with-keygrip
 /home/psylinux/.gnupg/pubring.kbx
 ------------------------------
@@ -133,13 +133,13 @@ Keygrip = 2BE91C3C443AA29C3703D004587AD6DA9D7E40FC
 ```
 
 Then write your corresponding **keygrip** into **sshcontrol** file
-```Bash
+```bash
 $ echo 2BE91C3C443AA29C3703D004587AD6DA9D7E40FC >> ~/.gnupg/sshcontrol
 ```
 
 Last, you need to tell SSH how to access the **gpg-agent**. This is done by changing the value of the **SSH_AUTH_SOCK** environment variable. The following two lines, when added to your **~/.bashrc**, will ensure the variable is set correctly and that the agent is launched and ready for use.
 
-```Bash
+```bash
 $ cat ~/.bashrc
 
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)

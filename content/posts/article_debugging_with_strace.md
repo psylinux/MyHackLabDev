@@ -30,22 +30,22 @@ Strace can show us all passed arguments with great filter capabilities.
     -x write to an output file
     -t shows the timestamp
     -r shows the relative timestamp
-```
+```bash
 $ strace Binary_File
 ```
 
 ## Using filters
 We can call the program with arguments and use the -e option to filter just what we want:
-```
+```bash
 $ strace -e socket, send, recv nc google.com 80
 ```
 
 ## Attaching to a running process
-```
+```bash
 $ strace -p PID
 ```
 
 ## Show the program statistics
-```
+```bash
 $ strace -c binary_file arguments
 ```

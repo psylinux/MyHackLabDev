@@ -28,25 +28,26 @@ date updated: '2021-03-25T17:37:57-03:00'
 ## Using xxd
 
 ### Binary to Hex
-```
+```bash
 $ xxd prog1.bin > b1.hex
 $ xxd prog1.bin > b2.hex
 ```
 ### Hex to Binary
-```
+```bash
 $ xxd -r -p b1.hex new_prog1.bin
 ```
 * Then we can generate the diff like this:
-```
+```bash
 diff b1.hex b2.hex
 ```
-or
-```
+
+- Or
+```bash
 vimdiff b1.hex b2.hex
 ```
 
 ## Using bsdiff
-```
+```bash
 $ apt-get install bsdiff
 
 $ bsdiff old_prog.bin new_prog.bin patch.bin

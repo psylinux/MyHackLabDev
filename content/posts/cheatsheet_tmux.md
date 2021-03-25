@@ -15,25 +15,26 @@ tags:
   - sysadmin
 weight: 10
 date updated: '2021-03-25T17:19:34-03:00'
+
 ---
 
 
-# Cheat Sheet :: TMUX
+# TMUX
 
 ## Working with Sessions
 
 ### Start a New Session
-```
+```bash
 $ tmux new-session
 ```
 
 - Or you can type
-```
+```bash
 $ tmux
 ```
 
 - **Or you can use the shorthand**
-```
+```bash
 tmux new
 ```
 
@@ -44,30 +45,30 @@ tmux new
 
 
 ### Start a New Session with the name **mysession**
-```
+```bash
 $ tmux new -s mysession : new -s mysession
-````
+```
 
 
 ### Kill/Delete Sessions
 
 - Kill/Delete **mysession**
-```
+```bash
 $ tmux kill-session -t mysession
-````
+```
 
 - **Or you can use the shorthand**
-```
+```bash
 $ tmux kill-ses -t mysession
-````
+```
 
 - Kill/Delete all sessions *but* **mysession**
-```
+```bash
 $ tmux kill-session -a -t mysession
 ```
 
 - Kill/Delete all sessions *but* the **current** session
-```
+```bash
 $ tmux kill-session -a
 ```
 
@@ -99,22 +100,22 @@ Ctrl + b + )
 
 
 ### Attach to the last session
-```
+```bash
 $ tmux attach-session
 ```
 
 - Or
-```
+```bash
 $ tmux attach
 ```
 
 - Or
-```
+```bash
 $ tmux at
 ```
 
 - **Or you can use the shorthand**
-```
+```bash
 $ tmux a
 ```
 
@@ -122,22 +123,22 @@ $ tmux a
 ### Attach to a session using a name
 
 - Attach to a session with the name **mysession**
-```
+```bash
 $ tmux attach-session -t mysession
 ```
 
 - Or
-```
+```bash
 $ tmux attach -t mysession
 ```
 
 - Or
-```
+```bash
 $ tmux at -t mysession
 ```
 
 - **Or you can use the shorthand**
-```
+```bash
 $ tmux a -t mysession
 ```
 
@@ -145,12 +146,12 @@ $ tmux a -t mysession
 ### Show all sessions
 
 - Listing all sessions
-```
+```bash
 $ tmux list-sessions
 ```
 
 - **Or you can use the shorthand**
-```
+```bash
 $ tmux ls
 ```
 
@@ -164,7 +165,7 @@ Ctrl + b + s
 
 ### Start a new Window
 - Start a new session with the name **mysession** and window name **mywindow**
-```
+```bash
 $ tmux new -s mysession -n mywindow
 ```
 
@@ -334,25 +335,25 @@ g
 G
 ```
 
-### Scroll using the Keyboard Arrows
+### Scroll using the Keyboard Cursor (Arrows)
 - Scroll Up
 ```vim
-⬆
+Keyboard Up Cursor // ⬆
 ```
 
 - Scroll Down
 ```vim
-⬇
+Keyboard Down Cursor // ⬇
 ```
 
 - Scroll Left
 ```vim
-⬅
+Keyboard Left Cursor // ⬅
 ```
 
 - Scroll Right
 ```vim
-⮕
+Keyboard Right Cursor // ⮕
 ```
 
 ### Scroll using the `vim` keys
@@ -488,14 +489,14 @@ set-option -g history-limit 50000
 ```
 
 - Start a New Session with a Defined Buffer Size (history)
-```
+```bash
 tmux set-option -g history-limit 50000; new-session
 ```
 
 
 ## Help
 - Show Every Session, Window, Pane, etc...
-```
+```bash
 $ tmux info
 ```
 
