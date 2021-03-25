@@ -132,10 +132,10 @@ Last, you need to tell SSH how to access the **gpg-agent**. This is done by chan
 
 ```Bash
 $ cat ~/.bashrc
-...
+
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
-...
+
 ```
 
 To continue, execute those commands in your current session.
