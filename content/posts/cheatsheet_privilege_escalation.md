@@ -17,8 +17,6 @@ date updated: '2021-03-25T17:36:52-03:00'
 ---
 
 
-# Cheat Sheet :: Privilege Escalation
-
 ## Using scripts to enum the machine
 - [https://github.com/rebootuser/LinEnum](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
 

@@ -15,14 +15,11 @@ tags:
   - compiling
   - cross-compiling
   - development
-  - '#include'
 weight: 10
 date updated: '2021-03-25T17:36:17-03:00'
 
 ---
 
-
-# Cheat Sheet :: GCC Syntax and Compiling Options 
 
 ## Static compiling
 ```bash

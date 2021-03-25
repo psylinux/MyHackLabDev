@@ -1,8 +1,8 @@
 ---
 author: Marcos Azevedo
 date: '2019-01-14T17:38:15-03:00'
-linktitle: Patching binary files in Linux
-title: Patching binary files in Linux
+linktitle: 'HowTo :: Patching binary files in Linux'
+title: 'HowTo :: Patching binary files in Linux'
 categories:
   - howto
   - assembly
@@ -22,8 +22,6 @@ date updated: '2021-03-25T17:37:57-03:00'
 
 ---
 
-
-# Patching binary files in Linux
 
 ## Using xxd
 

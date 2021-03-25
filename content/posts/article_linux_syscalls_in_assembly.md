@@ -18,14 +18,12 @@ tags:
   - linux
   - userland
   - exploitation
-  - '#define'
 weight: 10
 date updated: '2021-03-25T17:35:56-03:00'
 
 ---
 
 
-# Using the Linux Syscalls in Assembly
 ## Preface
 In this post we'll see how a process running in the **userland** can invoke **syscalls** to run system commands.
 

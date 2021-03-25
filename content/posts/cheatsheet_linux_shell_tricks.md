@@ -17,8 +17,6 @@ date updated: '2021-03-25T17:36:34-03:00'
 ---
 
 
-# Cheat Sheet :: Linux Shell Tricks
-
 ## To find the corresponding hex code
 ```bash
 echo -n "&" | hexdump -C

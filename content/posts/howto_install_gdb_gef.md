@@ -20,8 +20,6 @@ date updated: '2021-03-25T17:37:17-03:00'
 ---
 
 
-# HowTo :: Install  GEF
-
 ## Cloning
 Goto [GEF Project](https://github.com/hugsy/gef) and clone the repository to __/opt__
 ```bash

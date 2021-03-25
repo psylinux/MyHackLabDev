@@ -20,8 +20,6 @@ date updated: '2021-03-25T17:35:37-03:00'
 ---
 
 
-# Getting Started with GDB
-
 ## Preface
 1. Before start, take a look at [GCC Compiling Cheat Sheet](/post/gcc-cheat-sheet).
 2. Go to [Installing GEF (GDB Plug-in)](/posts/installing-gdb-gef), to use GEF Plug-in.

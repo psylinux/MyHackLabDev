@@ -17,7 +17,7 @@ date updated: '2021-03-25T17:38:15-03:00'
 ---
 
 
-# HowTo :: SSH access using a GPG key for authentication
+## Preface
 Many of us are familiar with Secure Shell (SSH), which allows us to connect to other systems using a key instead of a password. This guide will explain how to eliminate SSH keys and use a GNU Privacy Guard (GPG) subkey instead. Using GPG does not make your SSH connections more secure. SSH is a secure protocol, and SSH keys are secure. Instead, it makes certain forms of key distribution and backup management easier. It also will not change your workflow for using SSH. All commands will continue to work as you expect, except that you will no longer have SSH private keys and you will unlock your GPG key instead.
 
 By having SSH authenticated by your GPG key, you will reduce the number of key files you need to secure and back up. This means that your key management hygiene still has to be good, which means choosing good passphrases and using appropriate key preservation strategies. Remember, you shouldn't back your private key up to the cloud!
@@ -32,7 +32,7 @@ This exercise will use a subkey that has been created for authentication to comp
 
 ## Create an authentication subkey
 You should already have a GPG key. If you don't, read one of the many [fine tutorials](https://docs.fedoraproject.org/en-US/quick-docs/create-gpg-keys/) available on this topic. You will create the subkey by editing your existing key. You need to edit your key in expert mode to get access to the appropriate options.
-The workflow adds a new key where you can choose its capabilitie -- specifically, you want to toggle its capabilities to just have authentication. SSH typically uses a 2048-bit RSA key that does not expire (type 8 in the options below).
+The workflow adds a new key where you can choose its capabilities -- specifically, you want to toggle its capabilities to just have authentication. SSH typically uses a 2048-bit RSA key that does not expire (type 8 in the options below).
 Below is an edited version of the workflow. This and all other commands were tested on Fedora 29.
 
 ```bash

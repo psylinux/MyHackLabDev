@@ -15,11 +15,10 @@ tags:
   - sysadmin
 weight: 10
 date updated: '2021-03-25T17:19:34-03:00'
+draft: true
 
 ---
 
-
-# TMUX
 
 ## Working with Sessions
 
