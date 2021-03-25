@@ -1,15 +1,28 @@
 ---
-author: "Marcos Azevedo"
-date: 2018-12-16
-linktitle: "Cheat Sheet :: GCC Compiling Cheat Sheet"
-title: "Cheat Sheet :: GCC Compiling Cheat Sheet"
-categories: [ "cheatsheet", "cross-compiling", "development" ]
-tags: [ "cheatsheet", "linux", "windows", "gcc", "compiling", "cross-compiling", "development" ]
+author: Marcos Azevedo
+date: '2018-12-16T17:38:15-03:00'
+linktitle: 'Cheat Sheet :: GCC Compiling Cheat Sheet'
+title: 'Cheat Sheet :: GCC Compiling Cheat Sheet'
+categories:
+  - cheatsheet
+  - cross-compiling
+  - development
+tags:
+  - cheatsheet
+  - linux
+  - windows
+  - gcc
+  - compiling
+  - cross-compiling
+  - development
+  - '#include'
 weight: 10
+date updated: '2021-03-25T17:36:17-03:00'
+
 ---
 
 
-# GCC Syntax and Compiling Options 
+# Cheat Sheet :: GCC Syntax and Compiling Options 
 
 ## Static compiling
 ```

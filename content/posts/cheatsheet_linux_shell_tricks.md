@@ -1,14 +1,23 @@
 ---
-author: "Marcos Azevedo"
-date: 2020-06-16
-linktitle: "Cheat Sheet :: Linux Shell Tricks"
-title: "Cheat Sheet :: Linux Shell Tricks"
-categories: [ "cheatsheet", "exploitation-techniques" ]
-tags: [ "cheatsheet", "shell", "bash", "linux" ]
+author: Marcos Azevedo
+date: '2020-06-16T17:38:15-03:00'
+linktitle: 'Cheat Sheet :: Linux Shell Tricks'
+title: 'Cheat Sheet :: Linux Shell Tricks'
+categories:
+  - cheatsheet
+  - exploitation-techniques
+tags:
+  - cheatsheet
+  - shell
+  - bash
+  - linux
 weight: 10
+date updated: '2021-03-25T17:36:34-03:00'
+
 ---
 
-# Linux Shell Tricks
+
+# Cheat Sheet :: Linux Shell Tricks
 
 ## To find the corresponding hex code
 ```

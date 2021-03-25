@@ -1,12 +1,24 @@
 ---
-author: "Marcos Azevedo"
-date: 2019-01-13
-linktitle: "Debugging with strace"
-title: "Debugging with strace"
-categories: [ "linux", "debug", "development" ]
-tags: [ "linux", "strace", "debug", "development" ]
+author: Marcos Azevedo
+date: '2019-01-13T17:38:15-03:00'
+linktitle: 'Article :: Debugging with strace'
+title: 'Article :: Debugging with strace'
+categories:
+  - article
+  - linux
+  - debug
+  - development
+tags:
+  - article
+  - linux
+  - strace
+  - debug
+  - development
 weight: 10
+date updated: '2021-03-25T17:35:10-03:00'
+
 ---
+
 
 # Strace debugging tool
 

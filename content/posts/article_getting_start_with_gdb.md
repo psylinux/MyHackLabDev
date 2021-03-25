@@ -1,12 +1,24 @@
 ---
-author: "Marcos Azevedo"
-date: 2018-12-16
-linktitle: "Getting Started with GDB"
-title: "Getting Started with GDB"
-categories: [ "linux", "debug", "development" ]
-tags: [ "linux", "gdb", "gef", "development" ]
+author: Marcos Azevedo
+date: '2018-12-16T17:38:15-03:00'
+linktitle: 'Article :: Getting Started with GDB'
+title: 'Article :: Getting Started with GDB'
+categories:
+  - article
+  - linux
+  - debug
+  - development
+tags:
+  - article
+  - linux
+  - gdb
+  - gef
+  - development
 weight: 10
+date updated: '2021-03-25T17:35:37-03:00'
+
 ---
+
 
 # Getting Started with GDB
 

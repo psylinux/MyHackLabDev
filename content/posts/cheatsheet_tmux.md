@@ -1,15 +1,24 @@
 ---
-author: "Marcos Azevedo"
-date: 2021-03-25
-linktitle: "Cheat Sheet :: Tmux"
-title: "Cheat Sheet :: Tmux"
-categories: [ "cheatsheet", "sysadmin", "shell" ]
-tags: [ "cheatsheet", "shell", "tmux", "linux", "sysadmin" ]
+author: Marcos Azevedo
+date: '2021-03-25T17:19:34-03:00'
+linktitle: 'Cheat Sheet :: Tmux'
+title: 'Cheat Sheet :: Tmux'
+categories:
+  - cheatsheet
+  - sysadmin
+  - shell
+tags:
+  - cheatsheet
+  - shell
+  - tmux
+  - linux
+  - sysadmin
 weight: 10
+date updated: '2021-03-25T17:19:34-03:00'
 ---
 
 
-# TMUX
+# Cheat Sheet :: TMUX
 
 ## Working with Sessions
 
@@ -348,7 +357,7 @@ G
 
 ### Scroll using the `vim` keys
 
-**FIRST: Remember to Set the `vim` keys in Buffer Mode***. Go to [[cheatsheet_tmux#Set the runtime tmux Options]] to learn more.
+**FIRST: Remember to Set the `vim` keys in Buffer Mode**. Go to [[cheatsheet_tmux#Set the runtime tmux Options]] to learn more.
 
 - Move Cursor to the Left
 ```vim

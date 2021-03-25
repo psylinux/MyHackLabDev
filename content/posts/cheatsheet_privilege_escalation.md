@@ -1,14 +1,24 @@
 ---
-author: "Marcos Azevedo"
-date: 2020-06-16
-linktitle: "Cheat Sheet :: Privilege Escalation"
-title: "Cheat Sheet :: Privilege Escalation"
-categories: [ "cheatsheet", "exploitation-techniques", "priv-escalation" ]
-tags: [ "cheatsheet", "priv-escalation", "exploitation-techniques" ]
+author: Marcos Azevedo
+date: '2020-06-16T17:38:15-03:00'
+linktitle: 'Cheat Sheet :: Privilege Escalation'
+title: 'Cheat Sheet :: Privilege Escalation'
+categories:
+  - cheatsheet
+  - exploitation-techniques
+  - priv-escalation
+tags:
+  - cheatsheet
+  - priv-escalation
+  - exploitation-techniques
+  - '#include<stdio.h>'
 weight: 10
+date updated: '2021-03-25T17:36:52-03:00'
+
 ---
 
-# Privilege Escalation
+
+# Cheat Sheet :: Privilege Escalation
 
 ## Using scripts to enum the machine
 - [https://github.com/rebootuser/LinEnum](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
