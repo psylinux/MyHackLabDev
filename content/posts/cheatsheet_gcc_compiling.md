@@ -9,7 +9,7 @@ weight: 10
 ---
 
 
-# GCC and Compiling Cheat Sheet
+# GCC Syntax and Compiling Options 
 
 ## Static compiling
 ```
